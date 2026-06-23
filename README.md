@@ -74,3 +74,19 @@ An AI-powered adaptive learning platform that generates personalized, multi-leve
    npm run dev
    ```
    Open your browser and navigate to **`http://localhost:3000`** to start using the application.
+
+---
+
+### 3. Running with Docker (Alternative)
+
+If you prefer to run the entire project in containerized mode (e.g., for production deployment or clean local execution), you can use Docker Compose.
+
+1. Ensure Docker is installed and running on your system.
+2. In the root directory of the project, run:
+   ```bash
+   docker-compose up --build
+   ```
+   This will automatically:
+   - Build the backend container exposing port `8000` (loading settings from your `./backend/.env` file).
+   - Build the frontend container exposing port `3000`.
+3. Open your browser and navigate to **`http://localhost:3000`**.
