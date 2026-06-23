@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FAFAFB;
+  --foreground: #16161A;
+  
+  --card-bg: #FFFFFF;
+  --border-color: #E7E7EA;
+  --primary-accent: #4F46E5;
+  
+  /* Status colors */
+  --status-gray: #9CA3AF;
+  --status-blue: #3B82F6;
+  --status-green: #10B981;
+  --status-amber: #F59E0B;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Custom styles for React Flow to make it premium */
+.react-flow__renderer {
+  background-color: var(--background) !important;
+}
+
+.react-flow__edge-path {
+  stroke-width: 1.5;
+  transition: stroke 0.3s, stroke-width 0.3s;
+}
+
+.react-flow__controls {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+  background: white !important;
+}
+
+.react-flow__controls-button {
+  background: white !important;
+  color: #4B5563 !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  fill: currentColor !important;
+}
+
+.react-flow__controls-button:hover {
+  background: #F3F4F6 !important;
+}
+
+.react-flow__minimap {
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1) !important;
+  background: white !important;
+}
