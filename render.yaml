@@ -1,0 +1,25 @@
+services:
+  # 1. FastAPI Backend Web Service
+  - type: web
+    name: alg-backend
+    env: docker
+    rootDir: backend
+    plan: free
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false # User will input this during setup
+      - key: PORT
+        value: 8000
+
+  # 2. Next.js Frontend Web Service
+  - type: web
+    name: alg-frontend
+    env: docker
+    rootDir: frontend
+    plan: free
+    envVars:
+      - key: NEXT_PUBLIC_API_URL
+        fromService:
+          name: alg-backend
+          type: web
+          property: host
